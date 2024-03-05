@@ -1,36 +1,37 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
-	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+/**
+ * Program Sketch.java
+ * @author: E. Yap
+ */
+
   public void settings() {
-	// put your size call here
+	// Size call
     size(400, 400);
   }
 
   /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
+   * Initial set up values
+   * Background colour
+   * i.e., stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
+    background(214, 245, 255);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+  // Everything drawn to the screen
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+    // Size and fill call
+    textSize(25);
+    fill(255, 255, 255);
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    // Variables for current time (hours and minutes)
+    int intHours = hour();    // Values from 0 - 23
+    int intMinutes = minute();  // Values from 0 - 59
+
+    // Output current time
+    text(intHours, 10, 30);
+    text(intMinutes, 50, 30);
   }
-  
-  // define other methods down here.
 }
